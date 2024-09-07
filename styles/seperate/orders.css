@@ -8,11 +8,7 @@
   margin:  100px auto;
 }
 
-body{
-  margin: 0;
-  font-family: Roboto,Arial;
-  color: rgb(33, 33,33);
-}
+
 
 .order-tittle{
   
@@ -75,5 +71,80 @@ body{
 
 
 
+/* order details */
 
+.order-details-grid {
+  padding: 40px 35px;
+  
+  border: 1px solid rgb(213, 217, 217);
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+ 
+
+
+  display: grid;
+  grid-template-columns: 110px 1fr 220px;
+  row-gap: 35px;
+  column-gap: 60px;
+  align-items: center;
+  
+}
+
+
+
+
+.order-img{
+ max-height: 110px;
+ max-width: 110px;
+
+}
+
+.order-details-name{
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+
+.order-arriving-date 
+{
+margin-bottom: 3px;
+}
+.order-quantity{
+  margin-bottom: 8px;
+
+}
+
+.buy-gain-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  height: 36px;
+  font-size: 15px;
+  border-radius: 8px;
+  width: 140px;
+ 
+}
+
+
+
+
+.button-img{
+  width: 25px;
+  margin-right: 15px;
+}
+
+.buy-gain-button span{
+  font-size: 15px;
+}
+
+
+.track-package-link{
+  border: 1px solid lightgrey;
+  text-decoration: none;
+  padding: 10px 50px;
+  border-radius: 8px;
+}
 

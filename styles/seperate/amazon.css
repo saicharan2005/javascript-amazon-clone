@@ -2,18 +2,13 @@
   margin-top: 60px;
  }
  
- /* body in general css  */
- body{
-  
-  margin: 0;
-  font-family: Roboto,Arial;
-  color: rgb(33, 33,33);
-}
+
 
 .grid-product{
   display: grid;
   grid-template-columns: repeat(7,1fr);
 }
+
 .each-product{
   
   
@@ -117,13 +112,4 @@ option{
 
 }
 
-/* this button ingeneral css */
-.button-p{
-  color: rgb(33,33,33);
-  background-color: rgb(255, 216, 20);
 
-  border: 1px solid rgb(252, 210, 0);
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(213,217,217,0.5);
-  
-}
