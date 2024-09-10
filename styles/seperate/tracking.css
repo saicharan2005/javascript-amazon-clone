@@ -1,0 +1,85 @@
+.main{
+  width: 850px;
+ /* margin-top: 90px;
+ margin-bottom: 100px; */
+ /* margin-left: auto;
+ margin-right: auto; */
+  padding: 0 20px;
+  margin:  100px auto;
+}
+
+
+.tacking-container{
+  display: block;
+}
+.tracking-product-img{
+  margin-top: 25px;
+  max-height: 150px;
+  max-width: 150px;
+  margin-bottom: 50px;
+}
+
+
+.tacking-order-link{
+  margin-bottom: 30px;
+  display: inline-block;
+
+}
+
+
+.traking-arriving{
+  
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+
+.tracking-order-details{
+  margin-bottom: 5px;
+}
+
+.tracking-order-quantity{
+  margin-bottom: 5px;
+}
+
+
+.traking-label-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.traking-label{
+  font-weight: 500;
+}
+
+.traking-label-present{
+  font-weight: 500;
+  color: rgb(6, 125, 98);
+}
+
+
+.traking-status-container{
+  border: 1px solid rgb(200,200,200);
+  height: 25px;
+  width: 100%;
+  
+  border-radius: 50px;
+
+}
+
+.traking-status-bar{
+
+  background-color: green;
+  height: 100%;
+  width: 50%;
+ 
+  border-radius: 50px;
+  
+}
