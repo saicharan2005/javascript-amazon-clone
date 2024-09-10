@@ -125,10 +125,11 @@
   font-size: 13px;
  display: block;
 }
-.orders-text{
+
+ .orders-text{
   font-size: 15px;
   display: block;
-  font-size: 700;
+  font-weight: 700;
 }
 
 
