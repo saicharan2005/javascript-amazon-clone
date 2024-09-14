@@ -13,3 +13,14 @@ body{
   font-family: Roboto,Arial;
   color: rgb(33, 33,33);
 }
+
+.link-primary{
+  color:rgb(1,124,182);
+  cursor: pointer;
+}
+
+
+.link-primary:hover{
+  color:rgb(196,80,0);
+  
+}
