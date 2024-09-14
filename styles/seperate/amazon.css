@@ -1,30 +1,66 @@
- .main{
+.main {
   margin-top: 60px;
- }
- 
-
-
-.grid-product{
-  display: grid;
-  grid-template-columns: repeat(7,1fr);
 }
 
-.each-product{
-  
-  
+.grid-product {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+@media (max-width: 2000px) {
+  .grid-product {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+/* This @media means when the screen width is 1600px or
+   less, we will divide the grid into 6 columns. */
+@media (max-width: 1600px) {
+  .grid-product {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .grid-product {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid-product {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .grid-product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .grid-product {
+    grid-template-columns: 1fr;
+  }
+}
+.each-product {
   padding: 40px 25px 25px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  border-right: 1px solid rgb(231, 231, 231) ;
-  border-bottom: 1px solid rgb(231, 231, 231) ;
-  
-
- 
+  border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-.product-img-containter{
+.product-img-containter {
   height: 180px;
   display: flex;
   align-items: center;
@@ -32,57 +68,49 @@
   margin-bottom: 20px;
 }
 
-.product-img{
-  max-width:  100%;
+.product-img {
+  /* Images will overflow their container by default. To
+    prevent this, we set max-width and max-height to 100%
+    so they stay inside their container. */
+  max-width: 100%;
   max-height: 100%;
 }
 
-
-.product-name{
-  
+.product-name {
   height: 40px;
   margin-bottom: 5px;
-  font-size: 16px;
 }
 
-
-.product-rating-container{
-  height: 22px;
-  margin-bottom:10px;
+.product-rating-container {
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: row;
-  
- align-items: center;
-  
-  
+
+  align-items: center;
 }
 
-.product-rating{
+.product-rating {
   width: 100px;
   margin-right: 6px;
 }
 
-.rating-count{
+.rating-count {
   margin-top: 4px;
-  color:rgb(1, 124, 182);
+  color: rgb(1, 124, 182);
   cursor: pointer;
-
 }
 
-
-.product-price{
+.product-price {
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-
-.product-quantity-container{
+.product-quantity-container {
   margin-bottom: 17px;
 }
 
 /* select option also in general css */
 
-select{
+/* select {
   border: none;
   padding: 3px 5px;
   border-radius: 8px;
@@ -90,26 +118,40 @@ select{
   color: rgb(33, 33, 33);
   cursor: pointer;
   font-size: 15px;
-  border: 1px solid  rgb(213, 217, 217);
-  box-shadow: 0 2px 5px rgba(213,217,217,0.5);
+  border: 1px solid rgb(213, 217, 217);
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+} */
 
-}
-
-option{
+option {
   font-weight: normal;
   display: block;
   cursor: pointer;
-
 }
 
-
-
-
-.add-to-button{
+.add-to-button {
   width: 100%;
   padding: 8px;
   border-radius: 50px;
-
 }
 
+.add-to-cart {
+  color: rgb(6, 125, 98);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
 
+  /* At first, the "Added to cart" message will
+     be invisible. Use JavaScript to change the
+     opacity and make it visible. */
+  opacity: 0;
+}
+
+.add-to-cart img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.product-spacer {
+  flex: 1;
+}
