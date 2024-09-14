@@ -22,7 +22,7 @@ body {
   /* The <body> element has a default margin of 8px
      on all sides. This removes the default margins. */
   margin: 0;
-<<<<<<< HEAD
+
   font-family: Roboto, Arial;
   color: rgb(33, 33, 33);
 }
@@ -61,7 +61,7 @@ select {
   font-size: 15px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
-=======
+
   font-family: Roboto,Arial;
   color: rgb(33, 33,33);
 }
@@ -75,5 +75,5 @@ select {
 .link-primary:hover{
   color:rgb(196,80,0);
   
->>>>>>> a2abf3571c0cda63ea7d9680207c317364c249e7
+
 }
