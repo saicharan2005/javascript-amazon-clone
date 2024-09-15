@@ -32,10 +32,11 @@
         
 
       </div>
-      <div class="middle-portion">Checkout( <a  class="items" href="#">3 items</a> )</div>
-      <div class="right-portion">
 
-        
+      <div class="middle-portion">Checkout( <a  class="items-link" href="amazon.html">3 items</a> )</div>
+
+
+      <div class="right-portion">        
           <img class="cart-icon" src="images/icons/checkout-lock-icon.png" alt="checkout-lock-icon">
         
 
@@ -54,10 +55,11 @@
     <div class="review-head">Review your order</div>
 
     <div class="checkout-grid">
-      <div class="order-summary">
-        <div class="order-product-container">
+      <div class="order-summary cart-js">
+        <!-- <div class="order-product-container">
           <div class="order-delivary-date">Delivery date: Tuesday, June 21</div>
           <div class="order-product-summary">
+
             <img  class="order-product-img" src="images/products/intermediate-composite-basketball.jpg" alt="intermediate-composite-basketball">
 
             <div class="checkout-product-details">
@@ -67,17 +69,17 @@
               <span class="quantity">
                 Quantity: <span class="quantity-label"> 2</span></span>
               
-              <span class="update-quantity-link"> Update</span>
-              <span class="update-quantity-link">Delete</span>
+              <span class="update-quantity-link link-primary"> Update</span>
+              <span class="update-quantity-link link-primary">Delete</span>
               </div>
             </div>
 
             <div class="delivery-option">
               <div class="delivery-title"> Choose a delivery option:</div>
               <div class="delivery-option-flex">
-                <input type="radio" name="delivery-option-1" class="delivery-option-radio">
+                <input type="radio" name="delivery-option-1" class="delivery-option-input">
                 <div>
-                  <div class="delivery-option-date">Tuesday, June 2
+                  <div class="delivery-option-date">Tuesday, June 16
                   </div>
                   <div class="delivery-type">
                     FREE Shipping                 
@@ -86,28 +88,28 @@
                 
               </div>
 
-              <!--  -->
+              
               <div class="delivery-option-flex">
-                <input type="radio" name="delivery-option-1" class="delivery-option-radio">
+                <input type="radio" name="delivery-option-1" class="delivery-option-input">
                 <div>
-                  <div class="delivery-option-date">Tuesday, June 2
+                  <div class="delivery-option-date">Wednesday, June 10
                   </div>
                   <div class="delivery-type">
-                    FREE Shipping                 
+                    $4.99 Shipping                 
                   </div>
                 </div>
                 
               </div>
 
 
-              <!--  -->
+              
               <div class="delivery-option-flex">
-                <input type="radio" name="delivery-option-1" class="delivery-option-radio">
+                <input type="radio" name="delivery-option-1" class="delivery-option-input">
                 <div>
-                  <div class="delivery-option-date">Tuesday, June 2
+                  <div class="delivery-option-date">monday, June 8
                   </div>
                   <div class="delivery-type">
-                    FREE Shipping                 
+                    $9.99 Shipping                 
                   </div>
                 </div>
                 
@@ -116,19 +118,46 @@
             </div>
             
 
-            <!-- // -->
+          
              
           </div>
 
-        </div>
+        </div> -->
       </div>
+
+
+      
       <div class="payment-summary"> 
         <div class="payment-summary-tittle">Order Summary</div>
         <div class="payment-summary-row">
           <div>Items (3):</div>
-          <div class="payment-summary">
+          <div class="payment-summary-money">
             $42.75</div>
         </div>
+
+        <div class="payment-summary-row">
+          <div>Shipping &amp; handling:</div>
+          <div class="payment-summary-money">$4.99</div>
+        </div>
+
+        <div class="payment-summary-row subtotal-row">
+          <div>Total before tax:</div>
+          <div class="payment-summary-money">$47.74</div>
+        </div>
+
+        <div class="payment-summary-row">
+          <div>Estimated tax (10%):</div>
+          <div class="payment-summary-money">$4.77</div>
+        </div>
+
+        <div class="payment-summary-row total-row">
+          <div>Order total:</div>
+          <div class="payment-summary-money">$52.51</div>
+        </div>
+
+        <button class="place-order-button button-p">
+          Place your order
+        </button>
         
       </div>
 
@@ -139,6 +168,10 @@
   </div>
 
 
+
+
+
+  <script type="module" src="scripts/checkout.js"></script>
 
   
 </body>

@@ -1,16 +1,13 @@
-.main {
-  max-width: 1100px;
-  margin-top: 150px;
-  margin-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 30px;
-}
+
 
 .amazon-checkout-header {
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
 
   position: fixed;
   top: 0;
@@ -18,6 +15,8 @@
   right: 0;
   padding: 0 30px;
   height: 60px;
+
+  z-index:1000;
 }
 
 .checkout-detail {
@@ -33,13 +32,7 @@
   width: 150px;
 }
 
-.header-link {
-  display: inline-block;
-  padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0);
-  cursor: pointer;
-  text-decoration: none;
-}
+
 
 .amazon-logo-white {
   margin-top: 5px;
@@ -49,56 +42,145 @@
   display: none;
 }
 
+
+@media (max-width: 575px) {
+  .checkout-header-left-section {
+    width: auto;
+  }
+
+  .amazon-logo {
+    display: none;
+  }
+
+  .amazon-mobile-logo {
+    display: inline-block;
+    height: 35px;
+    margin-top: 5px;
+  }
+}
+
 /* middle */
 
 .middle-portion {
   font-weight: 500;
   font-size: 25px;
+
   flex: 1;
   flex-shrink: 0;
+  text-align: center;
+
   display: flex;
   justify-content: center;
-  margin-right: 60px;
+  
 }
 
-.items {
+@media (max-width: 1000px) {
+  .checkout-header-middle-section {
+    font-size: 20px;
+    margin-right: 60px;
+  }
+
+  .return-to-home-link {
+    font-size: 18px;
+  }
+}
+
+.items-link {
   color: rgb(0, 113, 133);
   text-decoration: none;
   font-size: 23px;
   cursor: pointer;
 }
 
+
+
+@media (max-width: 575px) {
+  .checkout-header-middle-section {
+    margin-right: 5px;
+  }
+}
+
 .right-portion {
   width: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  text-align: right;
+  
 }
+
+
+
+
+@media (max-width: 1000px) {
+  .checkout-header-right-section {
+    width: auto;
+  }
+}
+
+
+
+
+
+/* main page */
+
+.main {
+  max-width: 1100px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+
+
+
 
 .review-head {
   font-size: 23px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .checkout-grid {
   display: grid;
-  grid-template-columns: 1fr 400px;
+
+  /* Here, 1fr means the first column will take
+     up the remaining space in the grid. */
+  grid-template-columns: 1fr 350px;
   background-color: rgb(253, 254, 255);
-  column-gap: 10px;
+  column-gap: 12px;
+
+   /* Use align-items: start; to prevent the elements
+     in the grid from stretching vertically. */
+     align-items: start;
 }
 
-.order-summary {
-
-
+@media (max-width:1000px){
+  .main{
+max-width: 500px;
+  }
+  .checkout-grid{
+    grid-template-columns: 1fr;
+  }
 }
+
+
 
 .payment-summary {
-  background-color: rgb(220, 237, 248);
+  padding-bottom: 5px;
+}
+
+@media (max-width:1000px){
+  .payment-summary {
+    /* grid-row: 1 means this element will be placed into row
+      1 in the grid. (Normally, the row that an element is
+      placed in is determined by the order of the elements in
+      the HTML. grid-row overrides this default ordering). */
+    grid-row: 1;
+    margin-bottom: 12px;
+  }
 }
 
 .order-product-container, .payment-summary{
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid rgb(222, 222, 222);
   padding: 20px;
   margin-bottom: 12px
 }
@@ -112,23 +194,31 @@
 }
 
 .order-product-summary {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  column-gap: 25px;
+}
+
+@media (max-width:1000px){
+  .order-product-summary{
+    grid-template-columns: 100px 1fr;
+    column-gap: 30px;
+  }
 }
 
 .order-product-img {
-  width: 110px;
-  height: 110px;
+  max-width: 100%;
+  max-height: 120px;
+
+  /* margin-left: auto;
+     margin-right auto;
+     Is a trick for centering an element horizontally
+     without needing a container. */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.checkout-product-details {
-  flex: 1fr;
-  margin-left: 10px;
-  display:flex ;
-  flex-direction: column;
 
-}
 
 .checkout-product-name {
   margin-bottom: 9px;
@@ -141,25 +231,43 @@
   color: rgb(177, 39, 4);
 }
 
-.update-quantity-link {
+.update-quantity-link .link-primary {
   margin-left: 3px;
 }
 
-.delivery-option {
-  flex: 1fr;
-  margin: 0 7px ;
+@media (max-width: 1000px) {
+  .delivery-option{
+    /* grid-column: 1 means this element will be placed
+       in column 1 in the grid. (Normally, the column that
+       an element is placed in is determined by the order
+       of the elements in the HTML. grid-column overrides
+       this default ordering).
+       
+       / span 2 means this element will take up 2 columns
+       in the grid (Normally, each element takes up 1
+       column in the grid). */
+    grid-column: 1 / span 2;
+  }
 }
 
+
+
 .delivery-title {
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .delivery-option-flex {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
+  display: grid;
+  grid-template-columns: 24px 1fr;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+
+.delivery-option-input {
+  margin-left: 0px;
+  cursor: pointer;
 }
 
 .delivery-option-date {
@@ -180,5 +288,54 @@
 
 .payment-summary-tittle{
   font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
   
 }
+
+
+
+.payment-summary-row {
+  display: grid;
+  /* 1fr auto; means the width of the 2nd column will be
+     determined by the elements inside the column (auto).
+     The 1st column will take up the remaining space. */
+  grid-template-columns: 1fr auto;
+
+  font-size: 15px;
+  margin-bottom: 9px;
+}
+
+.payment-summary-money {
+  text-align: right;
+}
+
+.subtotal-row .payment-summary-money {
+  border-top: 1px solid rgb(222, 222, 222);
+}
+
+.subtotal-row div {
+  padding-top: 9px;
+}
+
+.total-row {
+  color: rgb(177, 39, 4);
+  font-weight: 700;
+  font-size: 18px;
+
+  border-top: 1px solid rgb(222, 222, 222);
+  padding-top: 18px;
+}
+
+.place-order-button {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 8px;
+
+  margin-top: 11px;
+  margin-bottom: 15px;
+}
+
+
+

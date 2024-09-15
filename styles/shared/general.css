@@ -54,7 +54,7 @@ button {
 
 select {
   color: rgb(33, 33, 33);
-  background-color: rgb(240, 240, 240);
+  background-color:  rgb(240, 240, 240);
   border: 1px solid rgb(213, 217, 217);
   border-radius: 8px;
   padding: 3px 5px;
@@ -65,6 +65,11 @@ select {
   font-family: Roboto,Arial;
   color: rgb(33, 33,33);
 }
+
+
+
+
+
 
 .link-primary{
   color:rgb(1,124,182);
@@ -77,3 +82,5 @@ select {
   
 
 }
+
+

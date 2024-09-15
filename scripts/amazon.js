@@ -1,3 +1,14 @@
+import {cart,addTocart} from '../data/cart.js';
+
+import {products} from '../data/products.js';
+import { fomartprice } from './utils/money.js';
+
+
+
+
+
+
+
 // const products = [
 //   {
 //     img: "images/products/intermediate-composite-basketball.jpg",
@@ -46,11 +57,9 @@ products.forEach((product) => {
                   <img class="product-rating" src="images/ratings/rating-${
                     product.rating.stars * 10
                   }.png" alt="rating">
-                  <div class="rating-count">${product.rating.count}</div>
+                  <div class="rating-count link-primary">${product.rating.count}</div>
                 </div>
-                <div class="product-price">$${(
-                  product.priceCents / 100
-                ).toFixed(2)}</div>
+                <div class="product-price">$${fomartprice(product.priceCents)}</div>
                 <div class="product-quantity-container">
 
 
@@ -74,7 +83,8 @@ products.forEach((product) => {
                     <img src="images/icons/checkmark.png" alt="checkmark">Added</div>
                 
                   
-                  <button class="add-to-button button-p">Add to Cart</button>
+                  <button class="add-to-button button-p add-to-card-js" 
+                  data-product-id="${product.id}">Add to Cart</button>
                 
 
 
@@ -82,8 +92,39 @@ products.forEach((product) => {
           `;
 });
 
+
+
+
+
+
 document.querySelector(".products-js").innerHTML = productsHtml;
 
+ function totalCount(){
+  
+  let totalcount=0;
+  cart.forEach( (cartItem)=>{
+    totalcount+=cartItem.quantity;
+    
+    });
 
 
+    document.querySelector('.js-cart-count').innerHTML=totalcount;
+}
 
+
+document.querySelectorAll('.add-to-card-js').forEach((button) =>{
+  button.addEventListener('click',()=>{
+     const productId=button.dataset.productId;
+    //  cart.push({
+    //   productId:product_Id,
+    //   quantity:1
+    //  });
+
+    addTocart(productId);
+
+    totalCount();
+    
+
+  });
+
+});
