@@ -101,14 +101,16 @@ document.querySelector(".products-js").innerHTML = productsHtml;
 
  function totalCount(){
   
-  let totalcount=0;
+  let totalcount= 0;
+
   cart.forEach( (cartItem)=>{
     totalcount+=cartItem.quantity;
     
     });
 
 
-    document.querySelector('.js-cart-count').innerHTML=totalcount;
+   document.querySelector('.js-cart-count').innerHTML=totalcount 
+    
 }
 
 
