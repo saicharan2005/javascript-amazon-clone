@@ -10,7 +10,7 @@ import { fomartprice } from "../utils/money.js";
 
 
 export  function paymentSummary(){
-
+  
   let subtotalPrice=0;
   let  shippingPrice=0
   cart.forEach((cartItem)=>{
@@ -29,6 +29,11 @@ export  function paymentSummary(){
   
 
   const overallprice =totalPrice+tax;
+   
+ 
+
+
+
 
    const paymenthtml=`
   <div class="payment-summary-tittle">Order Summary</div>
@@ -66,4 +71,6 @@ export  function paymentSummary(){
 
       document.querySelector('.js-payment-summary').innerHTML=paymenthtml
 }
+
+export const getPaymentSummary = () => paymentSummaryData;
 
