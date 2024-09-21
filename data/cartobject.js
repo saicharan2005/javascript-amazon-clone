@@ -1,8 +1,10 @@
 
 
+function Cart(localkey){
+
 const cart={
 
-cartItems :JSON.parse(localStorage.getItem("cart-object")) || [
+cartItems :JSON.parse(localStorage.getItem(localkey)) || [
     {
       productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
       quantity: 1,
@@ -17,7 +19,7 @@ cartItems :JSON.parse(localStorage.getItem("cart-object")) || [
 
 
   saveToLocalStorage() {
-    localStorage.setItem("cart-object", JSON.stringify(this.cartItems));
+    localStorage.setItem(localkey, JSON.stringify(this.cartItems));
   },
   
    addTocart(productId) {
@@ -51,7 +53,7 @@ deleteProduct(productId) {
       }
     });
   
-    cart = newcart;
+    this.cartItems = newcart;
   
     this.saveToLocalStorage();
   },
@@ -70,12 +72,27 @@ choosedeliveryOption(productId, deliveryoptionId) {
   }
 }
 
-console.log(cart);
+return cart;
+}
 
 
-cart.addTocart("3ebe75dc-64d2-4137-8860-1f5a963e534b");
+
+
+const cart1=Cart('cart1-object')
+console.log(cart1);
+
+cart1.addTocart("54e0eccd-8f36-462b-b68a-8182611d9add");
+cart1.deleteProduct("54e0eccd-8f36-462b-b68a-8182611d9add")
+
+
+const cart2=Cart('cart2-object');
+console.log(cart2);
+
+
+
 
   
+
   
   
   
