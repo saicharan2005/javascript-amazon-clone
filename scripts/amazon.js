@@ -1,8 +1,11 @@
 import {cart,addTocart} from '../data/cart.js';
 
-import {products} from '../data/products.js';
+import {products,loadProducts} from '../data/products.js';
 import { fomartprice } from './utils/money.js';
 
+
+
+loadProducts(renderproducts)
 
 
 
@@ -41,7 +44,8 @@ import { fomartprice } from './utils/money.js';
 
 // the above code we  already have data file we  can add it
 
-let productsHtml = "";
+function renderproducts(){
+  let productsHtml = "";
 products.forEach((product) => {
   // const itemHtml =`
   productsHtml += `
@@ -54,9 +58,7 @@ products.forEach((product) => {
                   ${product.name}
                 </div>
                 <div class="product-rating-container">
-                  <img class="product-rating" src="images/ratings/rating-${
-                    product.rating.stars * 10
-                  }.png" alt="rating">
+                  <img class="product-rating" src=${product.getUrlMethod()}>
                   <div class="rating-count link-primary">${product.rating.count}</div>
                 </div>
                 <div class="product-price">$${fomartprice(product.priceCents)}</div>
@@ -77,6 +79,9 @@ products.forEach((product) => {
 
                   </select>
                 </div>
+                ${
+                product.addsizechartLink()
+                }
 
                 <div class="product-spacer"></div>
                   <div class="add-to-cart"> 
@@ -130,3 +135,5 @@ document.querySelectorAll('.add-to-card-js').forEach((button) =>{
   });
 
 });
+}
+
